@@ -1,5 +1,5 @@
 import { filter } from '../sorted-catalog.js'
-import { navigateToUrl, CATALOG_URL, LOGIN_URL, REGISTRATTION_URL } from '../routing.js'
+import { navigateToUrl, CATALOG_URL, LOGIN_URL, REGISTRATTION_URL, currentUrl } from '../routing.js'
 
 
 export default function navigateToLink() {
@@ -15,30 +15,33 @@ export default function navigateToLink() {
     })
 
     const catalog = document.querySelector('.catalog'); {
-        catalog.addEventListener('click', (event) => {
-            event.preventDefault;
+        catalog.onclick = (event) => {
+            event.preventDefault();
             navigateToUrl(CATALOG_URL);
-        })
+        }
     }
 
     const login = document.querySelector('.login'); {
-        login.addEventListener('click', (event) => {
-            event.preventDefault;
+        login.onclick = (event) => {
+            event.preventDefault();
             navigateToUrl(LOGIN_URL);
-        })
+        }
     }
 
     const registration = document.querySelector('.registration'); {
-        registration.addEventListener('click', (event) => {
-            event.preventDefault;
+        console.log(registration)
+        registration.onclick = (event) => {
+            event.preventDefault();
             navigateToUrl(REGISTRATTION_URL);
-        })
+        }
     }
 
-    const CatalogRegistration = document.querySelector('.catalog-egistation'); {
-        CatalogRegistration.addEventListener('click', (event) => {
-            event.preventDefault;
-            navigateToUrl(REGISTRATTION_URL);
-        })
+    if (currentUrl === CATALOG_URL) {
+        const CatalogRegistration = document.querySelector('.catalog-registation'); {
+            CatalogRegistration.onclick = (event) => {
+                event.preventDefault();
+                navigateToUrl(REGISTRATTION_URL);
+            }
+        }
     }
 }

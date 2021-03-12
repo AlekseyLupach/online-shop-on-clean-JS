@@ -9,7 +9,7 @@ const template = `
             <button class="catalogbtn button_type_airpods" data-filter="airpods">AirPods</button>
             <button class="catalogbtn button_type_airpods" data-filter="tv">TV</button>
     </div>
-    <span class="please-register please-register-catalog">Для добавления в корзину, пожалуйста <a class="catalog-egistation" href="">зарегестрирутесь!</a></span>
+    <span class="please-register please-register-catalog">Для добавления в корзину, пожалуйста <a class="catalog-registation" href="">зарегестрирутесь!</a></span>
         <div class="container">
                 <div class="filter-price">
                 <div class="filter-price__wrapper">

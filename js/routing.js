@@ -30,13 +30,11 @@ export const { pathname: currentUrl } = window.location;
 
 export function renderPage() {
 
-
-
   const { pathname: currentUrl } = window.location;
 
   const header = document.querySelector('header .header__auth');
-
   if (!currentUser.userData) {
+
     header.innerHTML = logRegHeader;
   } else {
     logOutHeader();
@@ -44,7 +42,7 @@ export function renderPage() {
 
   if (currentUrl === CATALOG_URL) {
     renderCatalog();
-
+    navigateToLink();
     return;
   }
 
