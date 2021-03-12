@@ -18,13 +18,13 @@ export const INDEX_URL = ['/index.html'];
 
 export const INDEX_URLS = ['/', '/index.html'];
 
-export const REGISTRATTION_URL = '/registration';
+export const REGISTRATTION_URL = ['/registration'];
 
-export const LOGIN_URL = '/login';
+export const LOGIN_URL = ['/login'];
 
-export const CATALOG_URL = '/catalog';
+export const CATALOG_URL = ['/catalog'];
 
-export const PRODUCT_URL = '/product';
+export const PRODUCT_URL = ['/product'];
 
 export const { pathname: currentUrl } = window.location;
 
