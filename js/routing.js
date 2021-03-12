@@ -31,12 +31,12 @@ export const { pathname: currentUrl } = window.location;
 
 export function renderPage() {
 
+  const { pathname: currentUrl } = window.location;
+
   if (currentUrl === INDEX_URL) {
     renderIndexHtml();
     renderLinkFilter();
   }
-
-  const { pathname: currentUrl } = window.location;
 
   const header = document.querySelector('header .header__auth');
 
