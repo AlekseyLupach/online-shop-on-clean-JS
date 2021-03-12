@@ -15,19 +15,29 @@ export default function navigateToLink() {
     })
 
     const catalog = document.querySelector('.catalog'); {
-        catalog.addEventListener('click', () => {
+        catalog.addEventListener('click', (event) => {
+            event.preventDefault;
             navigateToUrl(CATALOG_URL);
         })
     }
 
     const login = document.querySelector('.login'); {
-        login.addEventListener('click', () => {
+        login.addEventListener('click', (event) => {
+            event.preventDefault;
             navigateToUrl(LOGIN_URL);
         })
     }
 
     const registration = document.querySelector('.registration'); {
-        registration.addEventListener('click', () => {
+        registration.addEventListener('click', (event) => {
+            event.preventDefault;
+            navigateToUrl(REGISTRATTION_URL);
+        })
+    }
+
+    const CatalogRegistration = document.querySelector('.catalog-egistation'); {
+        CatalogRegistration.addEventListener('click', (event) => {
+            event.preventDefault;
             navigateToUrl(REGISTRATTION_URL);
         })
     }
