@@ -1,8 +1,9 @@
 import { filter } from '../sorted-catalog.js'
-import { navigateToUrl, CATALOG_URL } from '../routing.js'
+import { navigateToUrl, CATALOG_URL, LOGIN_URL, REGISTRATTION_URL } from '../routing.js'
 
-const productBtn = document.querySelectorAll('.product-btn')
-export default function renderLinkFilter() {
+
+export default function navigateToLink() {
+    const productBtn = document.querySelectorAll('.product-btn')
     productBtn.forEach((button) => {
         button.onclick = (event) => {
             event.preventDefault();
@@ -12,4 +13,22 @@ export default function renderLinkFilter() {
             filter(currentBtn, products);
         }
     })
+
+    const catalog = document.querySelector('.catalog'); {
+        catalog.addEventListener('click', () => {
+            navigateToUrl(CATALOG_URL);
+        })
+    }
+
+    const login = document.querySelector('.login'); {
+        login.addEventListener('click', () => {
+            navigateToUrl(LOGIN_URL);
+        })
+    }
+
+    const registration = document.querySelector('.registration'); {
+        registration.addEventListener('click', () => {
+            navigateToUrl(REGISTRATTION_URL);
+        })
+    }
 }

@@ -9,7 +9,7 @@ import renderCartQuantity from './render/render-cart-quantity.js'
 import renderCartFullPrice from './render/render-cart-full-price.js'
 import cartModalPage from './products-cart-page.js'
 import logOutHeader from './render/render-header-user.js'
-import renderLinkFilter from './render/render-link-filter.js'
+import navigateToLink from './render/render-link-filter.js'
 
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
@@ -30,7 +30,7 @@ export const { pathname: currentUrl } = window.location;
 
 export function renderPage() {
 
-  renderLinkFilter();
+
 
   const { pathname: currentUrl } = window.location;
 
@@ -72,7 +72,7 @@ export function renderPage() {
     renderCart();
     renderCartFullPrice();
     renderCartQuantity();
-
+    navigateToLink();
     return;
   }
 }
