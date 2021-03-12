@@ -15,9 +15,9 @@ import renderIndexHtml from './templates/index-html/index.js'
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
 
-export const INDEX_URL = ['/nostalgic-poincare-47660c.netlify.app/'];
+export const INDEX_URL = ['/index.html'];
 
-export const INDEX_URLS = ['/', '/nostalgic-poincare-47660c.netlify.app/'];
+export const INDEX_URLS = ['/', '/index.html'];
 
 export const REGISTRATTION_URL = '/registration';
 
