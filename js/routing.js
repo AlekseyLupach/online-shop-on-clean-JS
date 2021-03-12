@@ -14,9 +14,9 @@ import renderLinkFilter from './render/render-link-filter.js'
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
 
-export const INDEX_URL = ['https://nostalgic-poincare-47660c.netlify.app/'];
+export const INDEX_URL = ['/nostalgic-poincare-47660c.netlify.app/'];
 
-export const INDEX_URLS = ['/', 'https://nostalgic-poincare-47660c.netlify.app/'];
+export const INDEX_URLS = ['/', '/nostalgic-poincare-47660c.netlify.app/'];
 
 export const REGISTRATTION_URL = '/registration';
 
