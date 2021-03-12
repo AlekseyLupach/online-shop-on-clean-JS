@@ -10,6 +10,7 @@ import renderCartFullPrice from './render/render-cart-full-price.js'
 import cartModalPage from './products-cart-page.js'
 import logOutHeader from './render/render-header-user.js'
 import renderLinkFilter from './render/render-link-filter.js'
+import renderIndexHtml from './templates/index-html/index.js'
 
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
@@ -30,7 +31,10 @@ export const { pathname: currentUrl } = window.location;
 
 export function renderPage() {
 
-  renderLinkFilter();
+  if (currentUrl === INDEX_URL) {
+    renderIndexHtml();
+    renderLinkFilter();
+  }
 
   const { pathname: currentUrl } = window.location;
 
