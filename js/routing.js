@@ -9,14 +9,14 @@ import renderCartQuantity from './render/render-cart-quantity.js'
 import renderCartFullPrice from './render/render-cart-full-price.js'
 import cartModalPage from './products-cart-page.js'
 import logOutHeader from './render/render-header-user.js'
-import navigateToLink from './render/render-link-filter.js'
+import renderLinkFilter from './render/render-link-filter.js'
 
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
 
-export const INDEX_URL = ['/index.html'];
+export const INDEX_URL = ['https://nostalgic-poincare-47660c.netlify.app/'];
 
-export const INDEX_URLS = ['/', '/index.html'];
+export const INDEX_URLS = ['/', 'https://nostalgic-poincare-47660c.netlify.app/'];
 
 export const REGISTRATTION_URL = '/registration';
 
@@ -30,11 +30,13 @@ export const { pathname: currentUrl } = window.location;
 
 export function renderPage() {
 
+  renderLinkFilter();
+
   const { pathname: currentUrl } = window.location;
 
   const header = document.querySelector('header .header__auth');
-  if (!currentUser.userData) {
 
+  if (!currentUser.userData) {
     header.innerHTML = logRegHeader;
   } else {
     logOutHeader();
@@ -42,7 +44,7 @@ export function renderPage() {
 
   if (currentUrl === CATALOG_URL) {
     renderCatalog();
-    navigateToLink();
+
     return;
   }
 
@@ -70,7 +72,7 @@ export function renderPage() {
     renderCart();
     renderCartFullPrice();
     renderCartQuantity();
-    navigateToLink();
+
     return;
   }
 }

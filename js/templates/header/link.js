@@ -1,5 +1,5 @@
 const template = `
-<a href="" class="registration">Регистрация</a> | <a href="" class="login">Войти</a>
+<a href="/registration" class="registration">Регистрация</a> | <a href="/login" class="login">Войти</a>
 `;
 
 export default template;
