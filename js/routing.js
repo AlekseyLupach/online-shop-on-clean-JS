@@ -10,7 +10,7 @@ import renderCartFullPrice from './render/render-cart-full-price.js'
 import cartModalPage from './products-cart-page.js'
 import logOutHeader from './render/render-header-user.js'
 import renderLinkFilter from './render/render-link-filter.js'
-import renderIndexHtml from './templates/index-html/index.js'
+import renderIndexHtml from './render/render-index-html.js'
 
 
 const productRoutePattern = /^\/catalog\/product\/\d+$/;
@@ -33,11 +33,6 @@ export function renderPage() {
 
   const { pathname: currentUrl } = window.location;
 
-  if (currentUrl === INDEX_URL) {
-    renderIndexHtml();
-    renderLinkFilter();
-  }
-
   const header = document.querySelector('header .header__auth');
 
   if (!currentUser.userData) {
@@ -45,6 +40,20 @@ export function renderPage() {
   } else {
     logOutHeader();
   }
+
+  if (INDEX_URLS.includes(currentUrl)) {
+    // renderIndexHtml();
+    cartModalPage.render();
+    renderCart();
+    renderCartFullPrice();
+    renderCartQuantity();
+    renderLinkFilter();
+
+    return;
+  }
+
+
+
 
   if (currentUrl === CATALOG_URL) {
     renderCatalog();
@@ -71,14 +80,7 @@ export function renderPage() {
     return;
   }
 
-  if (INDEX_URLS.includes(currentUrl)) {
-    cartModalPage.render();
-    renderCart();
-    renderCartFullPrice();
-    renderCartQuantity();
 
-    return;
-  }
 }
 
 export function navigateToUrl(url) {
